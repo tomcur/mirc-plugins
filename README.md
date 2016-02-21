@@ -1,6 +1,6 @@
 ## What is this?
 
-This is a repository to hold some of my plugins for the [mIRC] IRC client(http://www.mirc.com).
+This is a repository to hold some of my plugins for the [mIRC](http://www.mirc.com) IRC client.
 
 #### Plugins:
 
