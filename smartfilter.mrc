@@ -27,7 +27,7 @@ alias cleanup {
     %var = $gettok($var(lastTalk. $+ *,%n),2-,46)
     %varVal = %lastTalk. [ $+ [ %var ] ]
     if ($isIdle(%varVal)) {
-      UNSET -s %lastTalk. [ $+ [ %var ] ]
+      UNSET %lastTalk. [ $+ [ %var ] ]
     }
     dec %n
   }
