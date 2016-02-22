@@ -4,7 +4,7 @@ on *:START: {
   if (%timeout == $null) {
     SET %timeout 300
   }
-  timerSMARTFILTERCLEANUP 0 5 cleanup
+  timerSMARTFILTERCLEANUP 0 300 cleanup
 }
 
 alias isIdle {
