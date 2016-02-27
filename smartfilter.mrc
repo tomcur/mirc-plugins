@@ -69,7 +69,7 @@ on ^*:QUIT: {
     inc %i
     %chan = $comchan($nick,%i)
     if ($nick(%chan,0) < %minNicks || !$isIdle(%lastTalk. [ $+ [ $network ] $+ . $+ [ %chan ] $+ . $+ [ $nick ] ])) {
-      echo $colour(quit) %chan * $nick ( [ $+ [ $fulladdress ] $+ ] ) Quit ( [ $+ [ $1- ] $+ ] )
+      echo $colour(quit) -t %chan * $nick ( [ $+ [ $fulladdress ] $+ ] ) Quit ( [ $+ [ $1- ] $+ ] )
     }
   }
 
@@ -78,9 +78,9 @@ on ^*:QUIT: {
 
 dialog smartFilter {
   ; Setup settings dialog.
-  title "Smart join and part filter"
+  title "Smart Join and Part Filter"
   size -1 -1 260 235
-  text "Smart join and part filter v1.1 by Beskhue. The idle timeout controls after how many seconds of idling in a specific channel joins/parts of a nick will not be shown in that channel.",1,15 15 230 50
+  text "Smart Join and Part Filter v1.2 by Beskhue. The idle timeout controls after how many seconds of idling in a specific channel joins/parts of a nick will not be shown in that channel.",1,15 15 230 50
   box "Idle timeout (seconds)", 2, 15 75 230 48
   edit %timeout, 3, 20 93 220 20
   box "Min. nicks on channel to enable filter", 4, 15 135 230 48
@@ -120,9 +120,9 @@ on *:dialog:smartfilter:*:*: {
 menu * {
   ; Add script to the context menu.
   -
-  Join/part Filter
+  Join/Part Filter
   .Settings: smartfilter
   .-
-  .About: echo -at ==------------------------oOo------------------------== | echo -at - Smart join and part filter v1.1 by Beskhue. | echo -at - Contact me at chat.freenode.net: Besk. | echo -at - https://github.com/Beskhue | echo -at ==------------------------oOo------------------------==
+  .About: echo -at ==------------------------oOo------------------------== | echo -at - Smart Join and Part Filter v1.2 by Beskhue. | echo -at - Contact me at chat.freenode.net: Besk. | echo -at - https://github.com/Beskhue | echo -at ==------------------------oOo------------------------==
   -
 }
